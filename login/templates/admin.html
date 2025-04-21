@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='admin.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>List de Usuários</h1>
+    <tabel>
+        <tr>
+            <th>ID</th>
+            <th>NOME</th>
+            <th>E-MAIL</th>
+            <th>CPF</th>
+        </tr>
+        {% for User in usuario_consulta %}
+        <tr><td>{{User.id}} - {{User.nome}} - {{User.email}} - {{User.cpf}}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

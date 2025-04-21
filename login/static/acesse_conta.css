@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
     background-size: auto;
     color: #000000;
-    height: 100vh;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
 }
@@ -36,7 +36,7 @@ nav {
 
 .help-link, .search-link {
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-size: 14px;
     text-transform: lowercase;
     font-weight: 400;
