@@ -1,2 +1,28 @@
-testnado os commits
+comandos dos banco de dados
 
+adicionar valores:
+
+    var = nome_tabela(coluna_tabela = 'valor_inserido')
+    db.session.add(var)
+    db.session.commit()
+    db.create_all()
+
+obter valores:
+
+    usuarios = db.session.query(nome_classe_tabela).all()
+    
+    .filter_by (nome='desejado').first() mostra o primeiro valor com o filtro sendo o nome "desejado"
+
+alternado valores:
+
+    copia a classe acima (usuarios) mas adiciona o .filter_by para especificar o valor que ser alternado
+
+    usuarios = db.session.query(nome_classe_tabela).filter_by(parametro de troca) /// aqui o "parametro de troca" é o que na tabela vai indicar o campo especifico a ser mudado, por exemplo o id, ou email enfim
+    usuarios.nome = "Pedro" ///aqui selecionei a classe 'usuarios' e especifiquei o campo que irei mudar na tabela, no caso o nome
+    db.session.commit() ///// commit serve para confirmar a alteracao
+
+deletar dados:
+
+    copia tudo ali de cima mas ao inves de colocar o "usuarios.nome = "Pedro"" vai ser colocado 
+
+        db.session.delete(usuarios) /// ele vai deletar o dado q foi especificado no filter_by, no caso a linha todas
