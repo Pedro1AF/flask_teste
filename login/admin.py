@@ -1,9 +1,9 @@
-from db import db
-from models import User
+import random
+from app import criar_conta
+import os
+from flask import Flask, render_template, request, redirect, url_for, session, flash
 
 
-usuarios = db.session.query(User).filter_by(id= 3).first()
-db.session.delete(usuarios)
-db.session.commit()
-print("Usuario deletado com sucesso!")
 
+
+    
